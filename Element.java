@@ -32,7 +32,7 @@ public class Element {
   }
 
   private String newElement(int e) {
-    String e1;
+    String e1 = " ";
     if (e >= 78) {
       String above78inc [] = {"Pt", "Au", "Hg", "Tl", "Pb", "Bi", "Po", "At", "Rn", "Fr", "Ra", "Ac", "Th", "Pa", "U", "Np", "Pu", "Am", "Cm", "Bk", "Cf", "Es", "Fm", "Md", "No", "Lr", "Rf", "Db", "Sg", "Bh", "Hs", "Mt", "Ds", "Rg", "Cn"};
       e1 = above78inc[e - 78];

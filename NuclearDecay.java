@@ -2,22 +2,28 @@ import java.util.Scanner;
 public class NuclearDecay {
   public static void main(String [] args) {
     System.out.println();
-    
-    Scanner input = new Scanner();
-    System.out.println("Atomic number: ");
+    Scanner input = new Scanner(System.in);
+
+    System.out.print("Atomic number: ");
     int atomic_num = input.nextInt();
-    System.out.println("Atomic mass: ");
+
+    System.out.print("Atomic mass: ");
     int atomic_mass = input.nextInt();
-    System.out.println("Element Symbol: ");
+
+    String dfguffghj = input.nextLine();
+    System.out.print("Element Symbol: ");
     String symbol = input.nextLine();
-    System.out.println("Decay series: ");
-    String series = input.nextInt();
+
+    System.out.print("Decay series: ");
+    String series = input.nextLine();
+
+    System.out.println();
 
     Element element = new Element();
     element.setElement(symbol);
     element.setAtomics(atomic_num, atomic_mass);
 
-    System.out.println("Starting element: ⋀" + element.getAtomicMass() + " ⋁" + element.getAtomicNumber() + " " + element.getElement());
+    System.out.println("Starting element: " + element.getAtomicMass() + " | " + element.getAtomicNumber() + " " + element.getElement());
     System.out.println("Decay Series:");
     System.out.println();
 
@@ -31,9 +37,9 @@ public class NuclearDecay {
         element.changeNum(2);
         element.changeMass(4);
       } else if (series.charAt(i) == 'b') {
-        element.changeMass(-1);
+        element.changeNum(-1);
       }
-      System.out.println("⋀" + element.getAtomicMass() + " ⋁" + element.getAtomicNumber() + " " + element.getElement());
+      System.out.println(element.getAtomicMass() + " | " + element.getAtomicNumber() + " " + element.getElement());
     }
     System.out.println("Done");
   }
